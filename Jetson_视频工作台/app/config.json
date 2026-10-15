@@ -1,0 +1,125 @@
+{
+  "default_output": "../outputs",
+  "preview_fps": 8,
+  "preview_width": 1280,
+  "modes": {
+    "uav": {
+      "engine": "../models/uav_yolov12n_640_fp16.engine",
+      "names": [
+        "uav"
+      ],
+      "track_high_thresh": 0.3,
+      "track_low_thresh": 0.05,
+      "new_track_thresh": 0.4,
+      "track_buffer": 30,
+      "match_thresh": 0.8,
+      "nms_iou": 0.7,
+      "max_det": 300,
+      "min_box_area": 1,
+      "cmc_method": "sparseOptFlow",
+      "with_reid": false,
+      "evaluation_conf": 0.001,
+      "hardware_encoder": true,
+      "cuda_graph": false,
+      "async_camera_motion": true,
+      "gil_interval_ms": 1
+    },
+    "coco": {
+      "engine": "../models/coco_yolov12n_1280_fp16.engine",
+      "names_file": "../models/coco80_names.yaml",
+      "track_high_thresh": 0.3,
+      "track_low_thresh": 0.05,
+      "new_track_thresh": 0.4,
+      "track_buffer": 30,
+      "match_thresh": 0.8,
+      "nms_iou": 0.7,
+      "max_det": 300,
+      "min_box_area": 1,
+      "cmc_method": "sparseOptFlow",
+      "with_reid": false,
+      "evaluation_conf": 0.001,
+      "hardware_encoder": true,
+      "cuda_graph": false,
+      "async_camera_motion": true,
+      "gpu_postprocess": true,
+      "gil_interval_ms": 1
+    }
+  },
+  "video_library": "../videos",
+  "default_profiles": {
+    "uav": "balanced",
+    "coco": "quality"
+  },
+  "profiles": {
+    "uav": {
+      "balanced": {
+        "label": "均衡 · 640 FP16",
+        "engine": "../models/uav_yolov12n_640_fp16.engine"
+      }
+    },
+    "coco": {
+      "quality": {
+        "label": "小目标优先 · 1280 FP16",
+        "engine": "../models/coco_yolov12n_1280_fp16.engine",
+        "description": "每帧检测并保存，保留相机运动补偿。小目标优先，速度较慢。"
+      },
+      "balanced": {
+        "label": "均衡 · 640 FP16",
+        "engine": "../models/coco_yolov12n_640_fp16.engine",
+        "description": "每帧检测并保存，保留完整相机运动补偿；精度与原 640 方案一致。"
+      },
+      "fast_motion": {
+        "label": "速度 · 640×384（移动镜头）",
+        "engine": "../models/coco_yolov12n_640x384_fp16.engine",
+        "gmc_downscale": 4,
+        "gmc_max_corners": 300,
+        "cuda_graph": true,
+        "draw_style": "compact",
+        "description": "横向视频优先；每帧检测，轻量相机运动补偿。检测精度与 640 方形输入略有差异。",
+        "preview_width": 640,
+        "preview_fps": 4
+      },
+      "fast_static": {
+        "label": "速度 · 640×384（固定机位）",
+        "engine": "../models/coco_yolov12n_640x384_fp16.engine",
+        "cmc_method": "none",
+        "cuda_graph": true,
+        "draw_style": "compact",
+        "description": "固定机位横向视频优先；每帧检测，关闭相机运动补偿。MOT20-01 实测约 104 FPS，其他视频会有差异。",
+        "preview_width": 640,
+        "preview_fps": 4
+      },
+      "speed": {
+        "label": "极速 · 512×320（去重优化）",
+        "engine": "../models/coco_yolov12n_512x320_fp16.engine",
+        "cmc_method": "none",
+        "cuda_graph": true,
+        "draw_style": "compact",
+        "description": "每帧一次检测并保存；针对密集人群减少重复框，保持极速。小目标信息仍受输入尺寸限制，需要更多细节可选512分区增强。",
+        "preview_width": 640,
+        "preview_fps": 4,
+        "nms_iou": 0.55
+      },
+      "speed_detail": {
+        "label": "人群细节 · 512×320（分区增强）",
+        "engine": "../models/coco_yolov12n_512x320_fp16.engine",
+        "cmc_method": "none",
+        "cuda_graph": true,
+        "draw_style": "compact",
+        "description": "每帧全图＋4个重叠区域，共5次512×320检测，合并后只跟踪一次。小目标更清楚，速度明显降低；固定机位优先。",
+        "preview_width": 640,
+        "preview_fps": 4,
+        "nms_iou": 0.7,
+        "detail_views": "tiles4",
+        "tile_fraction": 0.6,
+        "tile_merge_iou": 0.6,
+        "track_high_thresh": 0.15,
+        "new_track_thresh": 0.2
+      },
+      "int8": {
+        "label": "实验 · 640 INT8（实测不推荐）",
+        "engine": "../models/coco_yolov12n_640_int8.engine"
+      }
+    }
+  }
+}

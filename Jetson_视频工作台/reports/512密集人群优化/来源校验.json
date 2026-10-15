@@ -1,0 +1,19 @@
+{
+  "new_inference": false,
+  "whole_video_data_sha256": "ad3a3bb8c2728520de9c4792667db4bd12d12aa1f758bf5be850f64c3d933b6b",
+  "generator_sha256": "67471f317d02ab609bc00a1f9a4bfecb3f995f4bcf781773f9fdcdb31f71133b",
+  "outputs": [
+    {
+      "name": "512密集人群精度优化报告.html",
+      "sha256": "ec0fb838ad5aed22c57a076470bba3703ecbc03d26984f8786035963f41842ce"
+    },
+    {
+      "name": "512密集人群精度优化报告.md",
+      "sha256": "f7fa616a78c1a9f39b4cb192568514258426bd03c4ac5a7431eb476fdeffc2c6"
+    },
+    {
+      "name": "512密集人群精度优化报告.pdf",
+      "sha256": "4972eb9ee34073cff27d0cf704c28e52bd7ad35843962fbbcad7597040ead2f9"
+    }
+  ]
+}

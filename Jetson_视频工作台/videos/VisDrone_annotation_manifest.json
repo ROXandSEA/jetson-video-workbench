@@ -1,0 +1,20 @@
+[
+  {
+    "video": "原始视频/VisDrone/VisDrone-val-uav0000086_00000_v-raw.mp4",
+    "ground_truth": "原始视频/VisDrone/VisDrone-val-uav0000086_00000_v-raw.gt.json",
+    "frames": 464,
+    "valid_objects": 23097
+  },
+  {
+    "video": "原始视频/VisDrone/VisDrone-val-uav0000117_02622_v-raw.mp4",
+    "ground_truth": "原始视频/VisDrone/VisDrone-val-uav0000117_02622_v-raw.gt.json",
+    "frames": 349,
+    "valid_objects": 16002
+  },
+  {
+    "video": "原始视频/VisDrone/VisDrone-val-uav0000137_00458_v-raw.mp4",
+    "ground_truth": "原始视频/VisDrone/VisDrone-val-uav0000137_00458_v-raw.gt.json",
+    "frames": 233,
+    "valid_objects": 24088
+  }
+]

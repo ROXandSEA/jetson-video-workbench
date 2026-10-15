@@ -1,0 +1,804 @@
+{
+  "mode": "coco",
+  "size": 640,
+  "names": {
+    "0": "person",
+    "1": "bicycle",
+    "2": "car",
+    "3": "motorcycle",
+    "4": "airplane",
+    "5": "bus",
+    "6": "train",
+    "7": "truck",
+    "8": "boat",
+    "9": "traffic light",
+    "10": "fire hydrant",
+    "11": "stop sign",
+    "12": "parking meter",
+    "13": "bench",
+    "14": "bird",
+    "15": "cat",
+    "16": "dog",
+    "17": "horse",
+    "18": "sheep",
+    "19": "cow",
+    "20": "elephant",
+    "21": "bear",
+    "22": "zebra",
+    "23": "giraffe",
+    "24": "backpack",
+    "25": "umbrella",
+    "26": "handbag",
+    "27": "tie",
+    "28": "suitcase",
+    "29": "frisbee",
+    "30": "skis",
+    "31": "snowboard",
+    "32": "sports ball",
+    "33": "kite",
+    "34": "baseball bat",
+    "35": "baseball glove",
+    "36": "skateboard",
+    "37": "surfboard",
+    "38": "tennis racket",
+    "39": "bottle",
+    "40": "wine glass",
+    "41": "cup",
+    "42": "fork",
+    "43": "knife",
+    "44": "spoon",
+    "45": "bowl",
+    "46": "banana",
+    "47": "apple",
+    "48": "sandwich",
+    "49": "orange",
+    "50": "broccoli",
+    "51": "carrot",
+    "52": "hot dog",
+    "53": "pizza",
+    "54": "donut",
+    "55": "cake",
+    "56": "chair",
+    "57": "couch",
+    "58": "potted plant",
+    "59": "bed",
+    "60": "dining table",
+    "61": "toilet",
+    "62": "tv",
+    "63": "laptop",
+    "64": "mouse",
+    "65": "remote",
+    "66": "keyboard",
+    "67": "cell phone",
+    "68": "microwave",
+    "69": "oven",
+    "70": "toaster",
+    "71": "sink",
+    "72": "refrigerator",
+    "73": "book",
+    "74": "clock",
+    "75": "vase",
+    "76": "scissors",
+    "77": "teddy bear",
+    "78": "hair drier",
+    "79": "toothbrush"
+  },
+  "weights_sha256": "419ff3dca37d69bacc93a50fa0c186a1c6f9fe62fae0f108b0872829689e9ca6",
+  "onnx_sha256": "6dd4655b5b36b73a06e3739fe9d5d00a3b7ff853ee6802f6d4418dbd81e329c4",
+  "opset": 17,
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "output_shape": [
+    1,
+    84,
+    8400
+  ],
+  "nms": false,
+  "input_dtype": "float32",
+  "output_semantics": "xywh + class probabilities, no objectness",
+  "preprocess": "fixed square letterbox 114, BGR to RGB, NCHW, /255",
+  "engine_sha256": "fe2316160bdafec335171ec20f6fb354f51a05e9a7ac4849a348996906cbe8d3",
+  "tensorrt": "10.7.0",
+  "precision": "int8",
+  "built_at": "2026-10-14T22:38:47.522768",
+  "io": [
+    {
+      "name": "images",
+      "shape": [
+        1,
+        3,
+        640,
+        640
+      ],
+      "dtype": "DataType.FLOAT",
+      "mode": "TensorIOMode.INPUT"
+    },
+    {
+      "name": "output0",
+      "shape": [
+        1,
+        84,
+        8400
+      ],
+      "dtype": "DataType.FLOAT",
+      "mode": "TensorIOMode.OUTPUT"
+    }
+  ],
+  "l4t": "# R36 (release), REVISION: 4.7, GCID: 42132812, BOARD: generic, EABI: aarch64, DATE: Thu Sep 18 22:54:44 UTC 2025\n# KERNEL_VARIANT: oot\nTARGET_USERSPACE_LIB_DIR=nvidia\nTARGET_USERSPACE_LIB_DIR_PATH=usr/lib/aarch64-linux-gnu/nvidia\n",
+  "format": "raw TensorRT plan",
+  "calibration": {
+    "algorithm": "TensorRT entropy calibration 2",
+    "size": 640,
+    "count": 160,
+    "videos": [
+      {
+        "name": "MOT17-04-DPM-raw.mp4",
+        "sha256": "ab0d2fc03bce5e112abe9a173de7a2d70b39875c0af3eca49d6160c6e317e495"
+      },
+      {
+        "name": "MOT17-05-DPM-raw.mp4",
+        "sha256": "29267a1a080b26ea195ba606b9c5331ad05e3db90a1eed8ed22455b0c34c00de"
+      },
+      {
+        "name": "MOT20-02-raw.mp4",
+        "sha256": "84b7a7d240522c82b24078de1c3084561b604f0360cec8a0e48d1b2ac06276de"
+      },
+      {
+        "name": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "sha256": "6cb4b5b63705d78691208cca37a918b543fe87a4f874ada2360b5b3b5d4fd419"
+      },
+      {
+        "name": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "sha256": "1731a9c3b87fc482ccabffa0bd1eb86075d3f6f1d4c92fb0c4a973c0a5b980cc"
+      }
+    ],
+    "frames": [
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 1
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 34
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 68
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 102
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 136
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 170
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 204
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 237
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 271
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 305
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 339
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 373
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 407
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 440
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 474
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 508
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 542
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 576
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 610
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 643
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 677
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 711
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 745
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 779
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 813
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 846
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 880
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 914
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 948
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 982
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 1016
+      },
+      {
+        "video": "MOT17-04-DPM-raw.mp4",
+        "frame_1based": 1050
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 1
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 27
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 54
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 81
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 108
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 135
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 162
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 189
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 216
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 243
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 270
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 297
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 324
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 351
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 378
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 405
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 432
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 459
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 486
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 513
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 540
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 567
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 594
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 621
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 648
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 675
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 702
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 729
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 756
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 783
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 810
+      },
+      {
+        "video": "MOT17-05-DPM-raw.mp4",
+        "frame_1based": 837
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 1
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 90
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 180
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 270
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 359
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 449
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 539
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 628
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 718
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 808
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 898
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 987
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 1077
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 1167
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 1256
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 1346
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 1436
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 1526
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 1615
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 1705
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 1795
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 1884
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 1974
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 2064
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 2154
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 2243
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 2333
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 2423
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 2512
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 2602
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 2692
+      },
+      {
+        "video": "MOT20-02-raw.mp4",
+        "frame_1based": 2782
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 1
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 15
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 30
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 45
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 60
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 75
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 90
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 105
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 120
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 135
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 150
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 165
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 180
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 195
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 210
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 225
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 239
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 254
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 269
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 284
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 299
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 314
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 329
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 344
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 359
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 374
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 389
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 404
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 419
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 434
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 449
+      },
+      {
+        "video": "VisDrone-val-uav0000086_00000_v-raw.mp4",
+        "frame_1based": 464
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 1
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 12
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 23
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 34
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 45
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 57
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 68
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 79
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 90
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 102
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 113
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 124
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 135
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 146
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 158
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 169
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 180
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 191
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 203
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 214
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 225
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 236
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 247
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 259
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 270
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 281
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 292
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 304
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 315
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 326
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 337
+      },
+      {
+        "video": "VisDrone-val-uav0000117_02622_v-raw.mp4",
+        "frame_1based": 349
+      }
+    ],
+    "preprocess": "RGB square letterbox 114 /255; identical inference preprocessing"
+  },
+  "precision_note": "INT8 with FP16/FP32 fallback; inspect layers JSON"
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#151615">
+  <title>TRACK / FORM · 视频追踪工作台</title>
+  <link rel="icon" href="/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="TRACK FORM 首页"><img src="/mark.svg" alt=""><span>TRACK<span class="brand-slash">/</span>FORM<small>VISION WORKSPACE</small></span></a>
+      <div class="top-right"><span class="connection"><i id="connection-dot"></i><span id="connection-label">连接本地服务</span></span><button id="settings-button" class="settings-button" aria-label="查看运行配置"><span class="settings-icon">☷</span>运行配置</button></div>
+    </header>
+
+    <main>
+      <section class="intro" aria-label="视频追踪工作台">
+        <div class="headline"><span class="eyebrow">01 / OBJECT TRACKING STUDIO</span><h1>EVERY FRAME.<br class="mobile-break"> <span>IN FOCUS.</span><svg class="headline-arrow" viewBox="0 0 100 100" aria-hidden="true"><path d="M15 82 82 15M19 15h63v63"/></svg></h1></div>
+        <div class="intro-side"><p>让每个目标，<br>有迹可循。</p><div class="mode-switch" role="group" aria-label="模型模式"><button class="mode active" data-mode="uav" aria-pressed="true">无人机 <small>UAV</small></button><button class="mode" data-mode="coco" aria-pressed="false">多类别 <small>COCO 80</small></button></div></div>
+      </section>
+
+      <section class="viewer-wrap" aria-label="中央视频显示区">
+        <div class="viewer-heading"><div class="view-label"><span class="live-dot" id="live-dot"></span><span id="view-title">视频视窗</span><span class="view-caption" id="view-caption">YOUR NEXT FRAME STARTS HERE</span></div><div class="viewer-heading-right"><span id="resolution-label">— × —</span><button id="fullscreen-button" class="icon-button" aria-label="视频全屏"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button></div></div>
+        <div class="viewer" id="viewer">
+          <div class="empty-state" id="empty-state">
+            <div class="ambient-grid"></div>
+            <div class="empty-index">TF—001<span>AWAITING INPUT</span></div>
+            <div class="ghost-type" aria-hidden="true">READY<br><span>TO TRACK.</span></div>
+            <div class="target-symbol" aria-hidden="true"><svg viewBox="0 0 180 180"><path class="target-corners" d="M18 59V18h41m62 0h41v41m0 62v41h-41m-62 0H18v-41"/><path class="target-cross" d="M72 90h36M90 72v36"/><circle cx="90" cy="90" r="53"/><circle class="inner-circle" cx="90" cy="90" r="33"/></svg></div>
+            <div class="empty-copy"><span class="small-index">[ INPUT REQUIRED ]</span><h2>等待视频进入视野</h2><p>导入一个视频，把下一段画面交给追踪。</p><button id="empty-pick" class="text-button">选择视频 <span>↗</span></button></div>
+            <div class="empty-footnote"><span>DETECT → ASSOCIATE → TRACK</span><span>本地处理 · 结果保存在本机</span></div>
+          </div>
+          <video id="video" preload="metadata" playsinline muted hidden></video>
+          <img id="live-frame" alt="正在处理的目标跟踪结果" hidden>
+          <div class="viewer-badge" id="viewer-badge" hidden><i></i><span id="viewer-badge-label">处理中</span></div>
+          <div class="frame-counter" id="frame-counter" hidden>FRAME <span id="frame-number">000000</span></div>
+          <div class="loading-overlay" id="loading-overlay" hidden><span class="spinner"></span><span id="loading-text">正在加载模型…</span></div>
+        </div>
+        <div class="transport"><button id="play-button" class="play-button" aria-label="播放视频" disabled><svg id="play-icon" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7Z"/></svg></button><span id="current-time" class="timecode">00:00</span><input id="seek" type="range" min="0" max="1000" value="0" aria-label="视频播放进度" disabled><span id="duration" class="timecode">00:00</span><span class="transport-divider"></span><span class="metric"><span>处理 FPS</span><strong id="fps">—</strong></span><span class="metric"><span>当前目标</span><strong id="targets">—</strong></span><button id="replay-button" class="replay-button" disabled aria-label="从头回放">↺</button></div>
+      </section>
+
+      <section class="control-deck" aria-label="视频任务控制">
+        <div class="file-controls">
+          <div class="field-line"><label for="source-path"><span>01</span>输入视频</label><div class="path-field"><input id="source-path" type="text" placeholder="选择视频，或填写本机绝对路径" autocomplete="off" spellcheck="false"><button id="pick-source" aria-label="选择输入视频"><svg viewBox="0 0 24 24"><path d="M3 7h7l2-3h9v15H3Z"/></svg></button></div></div>
+          <div class="field-line"><label for="output-path"><span>02</span>导出目录</label><div class="path-field"><input id="output-path" type="text" placeholder="结果视频与轨迹的保存位置" autocomplete="off" spellcheck="false"><button id="pick-output" aria-label="选择结果导出目录"><svg viewBox="0 0 24 24"><path d="M3 7h7l2-3h9v15H3Z"/><path d="M12 9v7m-3-3 3 3 3-3"/></svg></button></div></div>
+          <div class="profile-field"><label for="profile">运行方案</label><select id="profile" aria-label="运行方案"></select><span id="profile-note">小目标视频优先选 1280；640 速度更快。</span></div>
+          <span class="file-note" id="file-note">支持 MP4 / AVI / MKV / MOV / WEBM</span>
+        </div>
+        <div class="task-panel"><div class="task-top"><span class="eyebrow">TASK STATUS</span><span id="percent">待开始</span></div><div class="progress-track"><span id="progress-fill"></span></div><p id="task-message" role="status" aria-live="polite">选择一个视频，开始你的追踪。</p><div class="task-links"><button id="stop-button" hidden>停止任务 <span>□</span></button><button id="open-output" hidden>查看导出目录 <span>↗</span></button><span id="elapsed-label">—</span></div></div>
+        <button id="start-button" class="start-button" disabled><span class="start-top">LET’S MAKE IT MOVE<span class="start-arrow">↗</span></span><span class="start-main">启动追踪<span class="start-small">START<br>TRACKING</span></span></button>
+      </section>
+      <section class="evaluation-panel" aria-labelledby="evaluation-title">
+        <div class="evaluation-heading"><div><span class="eyebrow">02 / DETECTION EVALUATION</span><h2 id="evaluation-title">mAP 准确性评估</h2></div><span id="evaluation-status" class="evaluation-status">等待评估</span></div>
+        <div class="evaluation-scores"><div><span>mAP@0.50</span><strong id="map50">—</strong></div><div><span>mAP@0.50:0.95</span><strong id="map50-95">—</strong></div><div><span>评估帧数</span><strong id="evaluation-frames">—</strong></div><div><span>标注目标数</span><strong id="evaluation-objects">—</strong></div></div>
+        <p id="evaluation-message" role="status">完成检测后，用配套人工标注计算。没有标注时不显示分数。</p>
+        <label class="annotation-field" for="annotation-path"><span>配套标注</span><input id="annotation-path" placeholder="自动查找同名 .gt.json；也可填写标注 JSON 的绝对路径" autocomplete="off" spellcheck="false"></label>
+        <p class="evaluation-note" id="evaluation-scope">评估原始检测框。mAP 不代表跟踪 ID 准确率，置信度也不是准确率。</p>
+        <div id="evaluation-classes" class="evaluation-classes" hidden></div>
+      </section>
+      <div class="error-message" id="error-message" role="alert" hidden><span>!</span><p id="error-text"></p><button id="dismiss-error" aria-label="关闭提示">×</button></div>
+    </main>
+    <footer class="footer"><span>TRACK / FORM<span class="footer-version">v2.0</span></span><div><span>YOLOv12</span><b>×</b><span>TensorRT</span><b>×</b><span>BoT-SORT</span></div><span>BUILT FOR JETSON ORIN NX <i>↗</i></span></footer>
+  </div>
+
+  <dialog id="settings-dialog">
+    <div class="dialog-top"><span class="eyebrow">WORKSPACE / CONFIGURATION</span><button id="close-settings" aria-label="关闭运行配置">×</button></div>
+    <h2>运行配置<span>↗</span></h2><p class="dialog-intro">分别加载无人机与 COCO 引擎，所有视频在本机处理。</p>
+    <div id="engine-list" class="engine-list"></div>
+    <div class="config-row"><span>运行依赖</span><strong id="dependency-label">等待检查</strong></div>
+    <div class="config-row"><span>结果视频编码</span><strong id="ffmpeg-label">等待检查</strong></div>
+    <p class="config-note">引擎路径在 <code>app/config.json</code> 配置。最高性能模式由 Jetson 部署流程设置；此界面不执行 sudo 命令。ReID 默认关闭。</p>
+    <button id="refresh-config" class="dialog-refresh">重新检查配置 <span>↗</span></button>
+  </dialog>
+</body>
+</html>

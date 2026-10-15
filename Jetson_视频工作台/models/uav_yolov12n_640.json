@@ -1,0 +1,25 @@
+{
+  "mode": "uav",
+  "size": 640,
+  "names": {
+    "0": "uav"
+  },
+  "weights_sha256": "d319ddad0bd68327abbe1f8bf8077ea7db1e63f6393cb4422d123b5036de803c",
+  "onnx_sha256": "ebf5e19f17c3533a88400303fffcb68324f95a99af9de735c8b2847309630ec3",
+  "opset": 17,
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "output_shape": [
+    1,
+    5,
+    8400
+  ],
+  "nms": false,
+  "input_dtype": "float32",
+  "output_semantics": "xywh + class probabilities, no objectness",
+  "preprocess": "fixed square letterbox 114, BGR to RGB, NCHW, /255"
+}

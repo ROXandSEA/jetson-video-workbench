@@ -1,0 +1,255 @@
+{
+  "videos": [
+    {
+      "dataset": "MOT20",
+      "sequence": "MOT20-08",
+      "source_url": "https://motchallenge.net/sequenceVideos/MOT20-08-raw.mp4",
+      "file": "原始视频/MOT20/MOT20-08-raw.mp4",
+      "kind": "official unannotated preview video",
+      "bytes": 22839007,
+      "sha256": "ef9d89cfb6df80fa56bbe0e0afb8d5ca352119d07db0eabf23876574448767a1",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "width": 960,
+            "height": 366,
+            "avg_frame_rate": "25/1",
+            "nb_frames": "806"
+          }
+        ],
+        "format": {
+          "duration": "32.240000"
+        }
+      },
+      "annotations": null
+    },
+    {
+      "dataset": "MOT20",
+      "sequence": "MOT20-01",
+      "source_url": "https://motchallenge.net/sequenceVideos/MOT20-01-raw.mp4",
+      "file": "原始视频/MOT20/MOT20-01-raw.mp4",
+      "kind": "official unannotated preview video",
+      "bytes": 13110890,
+      "sha256": "0105c42857c50f73c6ec50d3456f9bb8a04cbe45944bf7bbc3c77dc755feeae8",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "width": 960,
+            "height": 540,
+            "avg_frame_rate": "25/1",
+            "nb_frames": "429"
+          }
+        ],
+        "format": {
+          "duration": "17.160000"
+        }
+      },
+      "annotations": null
+    },
+    {
+      "dataset": "MOT17",
+      "sequence": "MOT17-04-DPM",
+      "source_url": "https://motchallenge.net/sequenceVideos/MOT17-04-DPM-raw.mp4",
+      "file": "原始视频/MOT17/MOT17-04-DPM-raw.mp4",
+      "kind": "official unannotated preview video",
+      "bytes": 14745062,
+      "sha256": "ab0d2fc03bce5e112abe9a173de7a2d70b39875c0af3eca49d6160c6e317e495",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "width": 960,
+            "height": 540,
+            "avg_frame_rate": "30/1",
+            "nb_frames": "1050"
+          }
+        ],
+        "format": {
+          "duration": "35.000000"
+        }
+      },
+      "annotations": null
+    },
+    {
+      "dataset": "MOT20",
+      "sequence": "MOT20-03",
+      "source_url": "https://motchallenge.net/sequenceVideos/MOT20-03-raw.mp4",
+      "file": "原始视频/MOT20/MOT20-03-raw.mp4",
+      "kind": "official unannotated preview video",
+      "bytes": 34619433,
+      "sha256": "a93dc3d6ef9d3f897db2dd493e96f3077ad7b6edc31225fefd5f4d204b9faba3",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "width": 586,
+            "height": 440,
+            "avg_frame_rate": "25/1",
+            "nb_frames": "2405"
+          }
+        ],
+        "format": {
+          "duration": "96.200000"
+        }
+      },
+      "annotations": null
+    },
+    {
+      "dataset": "MOT17",
+      "sequence": "MOT17-05-DPM",
+      "source_url": "https://motchallenge.net/sequenceVideos/MOT17-05-DPM-raw.mp4",
+      "file": "原始视频/MOT17/MOT17-05-DPM-raw.mp4",
+      "kind": "official unannotated preview video",
+      "bytes": 17951387,
+      "sha256": "29267a1a080b26ea195ba606b9c5331ad05e3db90a1eed8ed22455b0c34c00de",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "width": 640,
+            "height": 480,
+            "avg_frame_rate": "14/1",
+            "nb_frames": "837"
+          }
+        ],
+        "format": {
+          "duration": "59.786000"
+        }
+      },
+      "annotations": null
+    },
+    {
+      "dataset": "MOT17",
+      "sequence": "MOT17-09-DPM",
+      "source_url": "https://motchallenge.net/sequenceVideos/MOT17-09-DPM-raw.mp4",
+      "file": "原始视频/MOT17/MOT17-09-DPM-raw.mp4",
+      "kind": "official unannotated preview video",
+      "bytes": 15326116,
+      "sha256": "44472faa5643b173fa9b0d4837d3018cd1f5c4a3f13ab4bc9f865cf552022f9d",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "width": 960,
+            "height": 540,
+            "avg_frame_rate": "30/1",
+            "nb_frames": "525"
+          }
+        ],
+        "format": {
+          "duration": "17.500000"
+        }
+      },
+      "annotations": null
+    },
+    {
+      "dataset": "MOT20",
+      "sequence": "MOT20-02",
+      "source_url": "https://motchallenge.net/sequenceVideos/MOT20-02-raw.mp4",
+      "file": "原始视频/MOT20/MOT20-02-raw.mp4",
+      "kind": "official unannotated preview video",
+      "bytes": 76066403,
+      "sha256": "84b7a7d240522c82b24078de1c3084561b604f0360cec8a0e48d1b2ac06276de",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "width": 960,
+            "height": 540,
+            "avg_frame_rate": "25/1",
+            "nb_frames": "2782"
+          }
+        ],
+        "format": {
+          "duration": "111.280000"
+        }
+      },
+      "annotations": null
+    },
+    {
+      "dataset": "MOT17",
+      "sequence": "MOT17-11-DPM",
+      "source_url": "https://motchallenge.net/sequenceVideos/MOT17-11-DPM-raw.mp4",
+      "file": "原始视频/MOT17/MOT17-11-DPM-raw.mp4",
+      "kind": "official unannotated preview video",
+      "bytes": 30266442,
+      "sha256": "315f28aedefb503d4b7405a36475481eefd7d3072ab9c27286716ed224736ec5",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "width": 960,
+            "height": 540,
+            "avg_frame_rate": "30/1",
+            "nb_frames": "900"
+          }
+        ],
+        "format": {
+          "duration": "30.000000"
+        }
+      },
+      "annotations": null
+    },
+    {
+      "dataset": "MOT20",
+      "sequence": "MOT20-05",
+      "source_url": "https://motchallenge.net/sequenceVideos/MOT20-05-raw.mp4",
+      "file": "原始视频/MOT20/MOT20-05-raw.mp4",
+      "kind": "official unannotated preview video",
+      "bytes": 86279421,
+      "sha256": "e5d1099517a3d5fe8cded2035fce54ff641171b3be5b97cfcb774db90a64bc8e",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "width": 826,
+            "height": 540,
+            "avg_frame_rate": "25/1",
+            "nb_frames": "3315"
+          }
+        ],
+        "format": {
+          "duration": "132.600000"
+        }
+      },
+      "annotations": null
+    },
+    {
+      "dataset": "MOT17",
+      "sequence": "MOT17-02-DPM",
+      "source_url": "https://motchallenge.net/sequenceVideos/MOT17-02-DPM-raw.mp4",
+      "file": "原始视频/MOT17/MOT17-02-DPM-raw.mp4",
+      "kind": "official unannotated preview video",
+      "bytes": 14780307,
+      "sha256": "d560bc50e1942d5c7335c937c8ac513aa87bb41ea51ae21fa02f661151d5a066",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "mpeg4",
+            "width": 960,
+            "height": 540,
+            "avg_frame_rate": "30/1",
+            "nb_frames": "600"
+          }
+        ],
+        "format": {
+          "duration": "20.000000"
+        }
+      },
+      "annotations": null
+    }
+  ],
+  "errors": []
+}

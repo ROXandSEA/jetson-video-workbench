@@ -1,0 +1,89 @@
+[
+  {
+    "dataset": "VisDrone2019-MOT-val",
+    "sequence": "uav0000086_00000_v",
+    "mirror_sequence": "1",
+    "file": "原始视频/VisDrone/VisDrone-val-uav0000086_00000_v-raw.mp4",
+    "source_url": "https://www.kaggle.com/api/v1/datasets/download/enansari/visdrone2019-mot-custom",
+    "mirror": "enansari/visdrone2019-mot-custom (three renamed validation sequences)",
+    "original_dataset": "https://github.com/VisDrone/VisDrone-Dataset",
+    "kind": "unannotated original image sequence assembled to H264 at 30 FPS; no resizing",
+    "frames": 464,
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1344,
+          "height": 756,
+          "avg_frame_rate": "30/1",
+          "nb_frames": "464"
+        }
+      ],
+      "format": {
+        "duration": "15.467000"
+      }
+    },
+    "bytes": 23454757,
+    "sha256": "6cb4b5b63705d78691208cca37a918b543fe87a4f874ada2360b5b3b5d4fd419",
+    "annotations_source": "datasets/VisDrone/VisDrone2019-MOT/annotations/1.txt"
+  },
+  {
+    "dataset": "VisDrone2019-MOT-val",
+    "sequence": "uav0000117_02622_v",
+    "mirror_sequence": "2",
+    "file": "原始视频/VisDrone/VisDrone-val-uav0000117_02622_v-raw.mp4",
+    "source_url": "https://www.kaggle.com/api/v1/datasets/download/enansari/visdrone2019-mot-custom",
+    "mirror": "enansari/visdrone2019-mot-custom (three renamed validation sequences)",
+    "original_dataset": "https://github.com/VisDrone/VisDrone-Dataset",
+    "kind": "unannotated original image sequence assembled to H264 at 30 FPS; no resizing",
+    "frames": 349,
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 2720,
+          "height": 1530,
+          "avg_frame_rate": "30/1",
+          "nb_frames": "349"
+        }
+      ],
+      "format": {
+        "duration": "11.634000"
+      }
+    },
+    "bytes": 54318702,
+    "sha256": "1731a9c3b87fc482ccabffa0bd1eb86075d3f6f1d4c92fb0c4a973c0a5b980cc",
+    "annotations_source": "datasets/VisDrone/VisDrone2019-MOT/annotations/2.txt"
+  },
+  {
+    "dataset": "VisDrone2019-MOT-val",
+    "sequence": "uav0000137_00458_v",
+    "mirror_sequence": "3",
+    "file": "原始视频/VisDrone/VisDrone-val-uav0000137_00458_v-raw.mp4",
+    "source_url": "https://www.kaggle.com/api/v1/datasets/download/enansari/visdrone2019-mot-custom",
+    "mirror": "enansari/visdrone2019-mot-custom (three renamed validation sequences)",
+    "original_dataset": "https://github.com/VisDrone/VisDrone-Dataset",
+    "kind": "unannotated original image sequence assembled to H264 at 30 FPS; no resizing",
+    "frames": 233,
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 2688,
+          "height": 1512,
+          "avg_frame_rate": "30/1",
+          "nb_frames": "233"
+        }
+      ],
+      "format": {
+        "duration": "7.767000"
+      }
+    },
+    "bytes": 41406481,
+    "sha256": "a107a7941ad69b0366a6df977596106389efbb323a844578a1fcbe1eeee990e7",
+    "annotations_source": "datasets/VisDrone/VisDrone2019-MOT/annotations/3.txt"
+  }
+]

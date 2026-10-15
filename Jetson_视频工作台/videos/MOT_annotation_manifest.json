@@ -1,0 +1,69 @@
+[
+  {
+    "file": "原始视频/MOT20/MOT20-08-raw.mp4",
+    "status": "test_split_no_public_ground_truth"
+  },
+  {
+    "file": "原始视频/MOT20/MOT20-01-raw.mp4",
+    "status": "ready",
+    "ground_truth": "原始视频/MOT20/MOT20-01-raw.gt.json",
+    "frames": 429,
+    "objects": 19870
+  },
+  {
+    "file": "原始视频/MOT17/MOT17-04-DPM-raw.mp4",
+    "status": "ready",
+    "ground_truth": "原始视频/MOT17/MOT17-04-DPM-raw.gt.json",
+    "frames": 1050,
+    "objects": 47557
+  },
+  {
+    "file": "原始视频/MOT20/MOT20-03-raw.mp4",
+    "status": "ready",
+    "ground_truth": "原始视频/MOT20/MOT20-03-raw.gt.json",
+    "frames": 2405,
+    "objects": 313658
+  },
+  {
+    "file": "原始视频/MOT17/MOT17-05-DPM-raw.mp4",
+    "status": "ready",
+    "ground_truth": "原始视频/MOT17/MOT17-05-DPM-raw.gt.json",
+    "frames": 837,
+    "objects": 6917
+  },
+  {
+    "file": "原始视频/MOT17/MOT17-09-DPM-raw.mp4",
+    "status": "ready",
+    "ground_truth": "原始视频/MOT17/MOT17-09-DPM-raw.gt.json",
+    "frames": 525,
+    "objects": 5325
+  },
+  {
+    "file": "原始视频/MOT20/MOT20-02-raw.mp4",
+    "status": "ready",
+    "ground_truth": "原始视频/MOT20/MOT20-02-raw.gt.json",
+    "frames": 2782,
+    "objects": 154742
+  },
+  {
+    "file": "原始视频/MOT17/MOT17-11-DPM-raw.mp4",
+    "status": "ready",
+    "ground_truth": "原始视频/MOT17/MOT17-11-DPM-raw.gt.json",
+    "frames": 900,
+    "objects": 9436
+  },
+  {
+    "file": "原始视频/MOT20/MOT20-05-raw.mp4",
+    "status": "ready",
+    "ground_truth": "原始视频/MOT20/MOT20-05-raw.gt.json",
+    "frames": 3315,
+    "objects": 646344
+  },
+  {
+    "file": "原始视频/MOT17/MOT17-02-DPM-raw.mp4",
+    "status": "ready",
+    "ground_truth": "原始视频/MOT17/MOT17-02-DPM-raw.gt.json",
+    "frames": 600,
+    "objects": 18581
+  }
+]

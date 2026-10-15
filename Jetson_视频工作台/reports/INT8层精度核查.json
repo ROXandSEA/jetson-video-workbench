@@ -1,0 +1,5 @@
+{
+  "total_engine_layers": 322,
+  "layers_with_INT8_format": 156,
+  "note": "Format presence in inspector layer I/O, not MAC/FLOP coverage; mixed precision"
+}

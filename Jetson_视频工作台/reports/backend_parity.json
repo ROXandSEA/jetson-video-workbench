@@ -1,0 +1,42 @@
+[
+  {
+    "video": "MOT20-01-raw.mp4",
+    "confidence": 0.05,
+    "preprocess_exact": true,
+    "reference_count": 39,
+    "numpy_count": 39,
+    "postprocess_ordered_allclose_1e4": true,
+    "unordered_max_nearest_error": 0.0,
+    "max_difference": 0.0
+  },
+  {
+    "video": "MOT20-01-raw.mp4",
+    "confidence": 0.001,
+    "preprocess_exact": true,
+    "reference_count": 300,
+    "numpy_count": 300,
+    "postprocess_ordered_allclose_1e4": false,
+    "unordered_max_nearest_error": 0.0,
+    "max_difference": 770.765625
+  },
+  {
+    "video": "VisDrone-val-uav0000137_00458_v-raw.mp4",
+    "confidence": 0.05,
+    "preprocess_exact": true,
+    "reference_count": 117,
+    "numpy_count": 117,
+    "postprocess_ordered_allclose_1e4": false,
+    "unordered_max_nearest_error": 0.0,
+    "max_difference": 2185.93603515625
+  },
+  {
+    "video": "VisDrone-val-uav0000137_00458_v-raw.mp4",
+    "confidence": 0.001,
+    "preprocess_exact": true,
+    "reference_count": 300,
+    "numpy_count": 300,
+    "postprocess_ordered_allclose_1e4": false,
+    "unordered_max_nearest_error": 0.0,
+    "max_difference": 2578.2255859375
+  }
+]

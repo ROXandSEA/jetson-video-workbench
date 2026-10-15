@@ -1,0 +1,7 @@
+numpy==1.26.4
+scipy==1.15.3
+lap==0.5.13
+cython_bbox==0.1.5
+PyYAML==6.0.3
+pycocotools==2.0.11
+Cython==3.2.4
